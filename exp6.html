@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Objects Demo</title>
+  <script>
+    // Function for Math Object
+    function showMath() {
+      let output = "<h3>Math Object Methods</h3>";
+      output += "Math.round(4.6) = " + Math.round(4.6) + "<br>";
+      output += "Math.floor(4.9) = " + Math.floor(4.9) + "<br>";
+      output += "Math.ceil(4.1) = " + Math.ceil(4.1) + "<br>";
+      output += "Math.max(10, 20, 5, 8) = " + Math.max(10, 20, 5, 8) + "<br>";
+      output += "Math.sqrt(49) = " + Math.sqrt(49) + "<br>";
+      document.getElementById("result").innerHTML = output;
+    }
+
+    // Function for String Object
+    function showString() {
+      let str = "Hello JavaScript!";
+      let output = "<h3>String Object Methods</h3>";
+      output += "Original String = " + str + "<br>";
+      output += "str.length = " + str.length + "<br>";
+      output += "str.toUpperCase() = " + str.toUpperCase() + "<br>";
+      output += "str.toLowerCase() = " + str.toLowerCase() + "<br>";
+      output += "str.substring(6, 16) = " + str.substring(6, 16) + "<br>";
+      output += "str.replace('JavaScript', 'World') = " + str.replace("JavaScript", "World") + "<br>";
+      document.getElementById("result").innerHTML = output;
+    }
+
+    // Function for Array Object
+    function showArray() {
+      let arr = [10, 20, 30, 40, 50];
+      let output = "<h3>Array Object Methods</h3>";
+      output += "Original Array = [" + arr + "]<br>";
+      output += "arr.length = " + arr.length + "<br>";
+      arr.push(60);
+      output += "arr.push(60) → [" + arr + "]<br>";
+      arr.pop();
+      output += "arr.pop() → [" + arr + "]<br>";
+      arr.shift();
+      output += "arr.shift() → [" + arr + "]<br>";
+      arr.unshift(5);
+      output += "arr.unshift(5) → [" + arr + "]<br>";
+      document.getElementById("result").innerHTML = output;
+    }
+
+    // Function for Date Object
+    function showDate() {
+      let today = new Date();
+      let output = "<h3>Date Object Methods</h3>";
+      output += "today.toString() = " + today.toString() + "<br>";
+      output += "today.getFullYear() = " + today.getFullYear() + "<br>";
+      output += "today.getMonth()+1 = " + (today.getMonth() + 1) + "<br>";
+      output += "today.getDate() = " + today.getDate() + "<br>";
+      output += "today.getDay() = " + today.getDay() + "<br>";
+      document.getElementById("result").innerHTML = output;
+    }
+  </script>
+</head>
+<body>
+  <h2>JavaScript Objects Demonstration</h2>
+  <button onclick="showMath()">Math</button>
+  <button onclick="showString()">String</button>
+  <button onclick="showArray()">Array</button>
+  <button onclick="showDate()">Date</button>
+
+  <div id="result" style="margin-top:20px; padding:10px; border:1px solid black;">
+    Click a button to see results here.
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arithmetic Operations</title>
+  <script>
+    // Function to get input values
+    function getValues() {
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      return [num1, num2];
+    }
+
+    // Addition
+    function addNumbers() {
+      let [a, b] = getValues();
+      document.getElementById("result").value = a + b;
+    }
+
+    // Subtraction
+    function subNumbers() {
+      let [a, b] = getValues();
+      document.getElementById("result").value = a - b;
+    }
+
+    // Multiplication
+    function mulNumbers() {
+      let [a, b] = getValues();
+      document.getElementById("result").value = a * b;
+    }
+
+    // Division
+    function divNumbers() {
+      let [a, b] = getValues();
+      if (b === 0) {
+        document.getElementById("result").value = "Cannot divide by zero!";
+      } else {
+        document.getElementById("result").value = a / b;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Arithmetic Operations</h2>
+
+  Enter First Number: 
+  <input type="text" id="num1"><br><br>
+
+  Enter Second Number: 
+  <input type="text" id="num2"><br><br>
+
+  Result: 
+  <input type="text" id="result" readonly><br><br>
+
+  <button onclick="addNumbers()">Add</button>
+  <button onclick="subNumbers()">Subtract</button>
+  <button onclick="mulNumbers()">Multiply</button>
+  <button onclick="divNumbers()">Divide</button>
+</body>
+</html>
